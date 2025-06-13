@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catalog Data Exchange</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>APILOGY</h1>
+      <h1>Catalog Data Exchange API</h1>
+
+      <div class="input-section">
+        <label for="dataType">Pilih Jenis Data:</label>
+        <select id="dataType">
+          <option value="/catalog-data/59">Data kredit kelas usaha</option>
+          <option value="/catalog-data/1">
+            Data produksi tanaman buah-buahan
+          </option>
+          <option value="/catalog-data/2">
+            Data produksi tanaman di perkebunan
+          </option>
+          <option value="/catalog-data/99">
+            Data kredit umkm serta jenis penggunaan
+          </option>
+          <option value="/catalog-data/140">Data tempat wisata</option>
+          <option value="/catalog-data/3">Data akreditasi sekolah</option>
+          <option value="/catalog-data/25">Data event tourism</option>
+          <option value="/catalog-data/61">
+            Data jumlah UMKM Berdasarkan Kategori & Skala Usaha Pada Tiap Kota
+            di Indonesia
+          </option>
+          <option value="/catalog-data/66">Data Guru Nasional</option>
+          <option value="/catalog-data/70">
+            Data profil administrasi tiap Kabupaten/Kota
+          </option>
+          <option value="/catalog-data/71">Data Sekolah Nasional</option>
+          <option value="/catalog-data/81">
+            Data pengeluaran untuk Tenaga Kerja per Provinsi
+          </option>
+          <option value="/catalog-data/101">
+            Data Besaran Upah Buruh per Provinsi
+          </option>
+          <option value="/catalog-data/109">Data tempat Restaurant</option>
+          <option value="/catalog-data/143">Data UMP tiap Provinsi</option>
+        </select>
+
+        <label for="page">Page:</label>
+        <input type="number" id="page" value="1" min="1" />
+
+        <label for="size">Size:</label>
+        <input type="number" id="size" value="10" min="1" />
+
+        <button id="submitBtn">Ambil Data</button>
+      </div>
+
+      <div class="download-buttons" style="display: none">
+        <button id="downloadCsv">Download CSV</button>
+        <button id="downloadExcel">Download Excel</button>
+      </div>
+
+      <div class="table-container">
+        <table id="dataTable"></table>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+  </body>
+</html>
